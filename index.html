@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-RU">
+ <head>
+ <meta http-equip="Content-Type" content="text/html; charset=windows-1251" />
+ <link rel="stylesheet" href="style.css" type="text/css">
+ <title>Javascript tutorial</title>
+ </head>
+ <body>
+  <header id="page_header">
+   <h1> Javascript tutorial</h1>
+   <nav>
+     <ul>
+	  <li><a href="home">Home</a></li>
+	  </ul>
+	  </nav>
+	  </header>
+	  <section id="vote">
+	   <article class="post">
+	   <header>
+	   <h2>First Lesson<h2>
+	   </header>
+	   <p>
+	   text.text.text.text.text.text.text.text.text.
+	   text.text.text.text.text.text.text.text.text.
+	   text.text.text.text.text.text.text.text.text.
+	   text.text.text.text.text.text.text.text.text.
+	   text.text.text.text.text.text.text.text.text.
+	   </p>
+	   <section id="sidebar"
+	    <nav>
+		<h3>Vote</h3>
+		<p>
+<script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript">
+ 
+            function AjaxFormRequest(result_id,form_id,url) {
+                jQuery.ajax({
+                    url:     url, 
+                    type:     "POST", 
+                    dataType: "html", 
+                    data: jQuery("#"+form_id).serialize(), 
+                    success: function(response) { 
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) { //
+                document.getElementById(result_id).innerHTML = "Ошибка при отправке формы";
+                }
+             });
+        }
+ 
+   </script>
+   <div style="border: 1px solid red; width: 220px; height: 80px; padding: 10px;" id="result_div_id">
+            Result<br/>
+            
+            
+        </div>
+        <br/><br/>
+        <form method="post" action="" id="form_id">
+            Name: <input type="text" name="name" value="" /><br/>
+            Number: <input type="text" name="phone" value="" /><br/>
+            <input type="button" value="Send" onclick="AjaxFormRequest('result_div_id', 'form_id', 'form.php')" />
+        </form>
+</p>
+		
+	   
